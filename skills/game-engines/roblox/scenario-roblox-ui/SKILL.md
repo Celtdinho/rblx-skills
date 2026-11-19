@@ -1,10 +1,15 @@
 ---
 name: scenario-roblox-ui
-description: "Use when building or fixing Roblox game UI or input: HUD (health bar, currency, ability cooldowns), main menu, shop with a scrolling grid, settings screen, inventory, \"UI scales wrong on phone\", buttons hidden behind the jump button, UI too small on a tablet or TV, portrait and landscape, top bar and safe area, Scale vs Offset, UIListLayout, UIGridLayout, UIFlexItem, StyleSheets and themes, gamepad or console menu navigation, the Input Action System (InputContext, InputAction, InputBinding), ContextActionService migration, PreferredInput, reduced motion and accessibility, localization and AutoLocalize, React, Fusion or Vide, the Device Simulator, and testing UI without a phone."
+description: "Use for Roblox UI, HUDs, menus, shops, responsive layouts, safe areas, StyleSheets and mobile/console input."
 license: MIT
 ---
 
 # Roblox UI and Input
+
+## Codex low-usage workflow
+<!-- CODEX_LOW_USAGE_V1 -->
+Read only relevant skills and references. Prefer one domain specialist; call the expert skill when MCP orchestration, a cross-domain issue or full audit actually requires it. QUICK: targeted static and behavior checks for contained fixes. STANDARD: focused tests and Studio playtest for features, with an inspected screenshot for visual changes. FULL: comprehensive audits, device checks and performance measurements for releases, major refactors or explicit requests. Reuse authorized Studio sessions, batch safe operations, avoid repeated hierarchy dumps and identical screenshots. Escalate if checks fail. Always verify server authorization, remote input, purchases, rewards and persistence on affected changes. Never report tests you did not run.
+
 
 Roblox Studio (October 2026 build) on macOS, driven through the scenario-roblox-expert toolkit.
 
@@ -18,8 +23,7 @@ If a sibling skill named here is missing from your available skills, load it wit
 (Scenario MCP) or ask the user to install it (https://github.com/scenario-labs/skills#install);
 unattended, proceed from tool schemas and flag the gap.
 
-**REQUIRED BACKGROUND:** scenario-roblox-expert (channels, review loop, toolkit, current-Roblox
-traps).
+**Shared toolkit on demand:** Consult the lead skill only when orchestration or cross-domain context requires it.
 
 ## Stance (the expert delta)
 

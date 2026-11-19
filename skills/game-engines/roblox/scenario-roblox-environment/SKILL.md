@@ -1,10 +1,15 @@
 ---
 name: scenario-roblox-environment
-description: "Use when building or lighting a Roblox map: graybox or blockout, level layout, landmarks, doors and walls, parts versus unions (CSG), collision fidelity, terrain (generate, sculpt, paint, water, Part to Terrain), MaterialVariants, custom terrain materials, PBR textures from Scenario, skyboxes, Lighting, Atmosphere, Clouds, bloom, color correction, day or night moods, interior light, scattering rocks, bushes and trees, level of detail (SLIM, RenderFidelity), per-model streaming or a streaming test, collision overlays, invisible walls, or texture sizes. Also when a map looks flat, foggy, too dark or plastic, grass pokes through floors, a doorway blocks players, content pops in or never unloads, a custom material disappears, or the sun lights the wrong side."
+description: "Use for Roblox maps, buildings, terrain, lighting, materials, collision and environment polish."
 license: MIT
 ---
 
 # Roblox environment (builder, environment artist and lighter)
+
+## Codex low-usage workflow
+<!-- CODEX_LOW_USAGE_V1 -->
+Read only relevant skills and references. Prefer one domain specialist; call the expert skill when MCP orchestration, a cross-domain issue or full audit actually requires it. QUICK: targeted static and behavior checks for contained fixes. STANDARD: focused tests and Studio playtest for features, with an inspected screenshot for visual changes. FULL: comprehensive audits, device checks and performance measurements for releases, major refactors or explicit requests. Reuse authorized Studio sessions, batch safe operations, avoid repeated hierarchy dumps and identical screenshots. Escalate if checks fail. Always verify server authorization, remote input, purchases, rewards and persistence on affected changes. Never report tests you did not run.
+
 
 Target: Roblox Studio (October 2026 build) on macOS, driven through the scenario-roblox-expert
 toolkit.
@@ -18,8 +23,7 @@ here is missing from your available skills, load it with `skill_get` (Scenario M
 to install it (https://github.com/scenario-labs/skills#install); unattended, proceed from tool
 schemas and flag the gap.
 
-**REQUIRED BACKGROUND:** scenario-roblox-expert (channels, review loop, toolkit, current-Roblox
-traps).
+**Shared toolkit on demand:** Consult the lead skill only when orchestration or cross-domain context requires it.
 
 **Status (2026-10-19):** live run 2026-10-19 01:14 passed 14 of 14 in Studio 0.743; offline O1 to O9
 pass. Scatter, the streaming test and the overlays are offline-tested only. A later run stalled on a

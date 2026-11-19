@@ -1,10 +1,15 @@
 ---
 name: scenario-roblox-animation
-description: "Use when animating Roblox characters, NPCs or creatures: animation not playing, wrong animation wins, animation priority or weight, blending, animation events and markers, hit timing, import from Blender or FBX, custom rig or creature rig, Motor6D or AnimationConstraint joints, procedural animation, IKControl look-at or foot and hand IK, FaceControls and dynamic head expressions, replacing the default Animate animations, KeyframeSequence or CurveAnimation built in code, Animator replication, AnimationController NPCs, Character Controller Library abilities, adaptive animation for custom humanoids."
+description: "Use for Roblox character and NPC animation tracks, rigs, markers, blending and replication."
 license: MIT
 ---
 
 # Roblox animation and characters
+
+## Codex low-usage workflow
+<!-- CODEX_LOW_USAGE_V1 -->
+Read only relevant skills and references. Prefer one domain specialist; call the expert skill when MCP orchestration, a cross-domain issue or full audit actually requires it. QUICK: targeted static and behavior checks for contained fixes. STANDARD: focused tests and Studio playtest for features, with an inspected screenshot for visual changes. FULL: comprehensive audits, device checks and performance measurements for releases, major refactors or explicit requests. Reuse authorized Studio sessions, batch safe operations, avoid repeated hierarchy dumps and identical screenshots. Escalate if checks fail. Always verify server authorization, remote input, purchases, rewards and persistence on affected changes. Never report tests you did not run.
+
 
 Target line: Roblox Studio (October 2026 build) on macOS, driven through the scenario-roblox-expert
 toolkit.
@@ -17,8 +22,7 @@ If a sibling skill named here is missing from your available skills, load it wit
 (Scenario MCP) or ask the user to install it (https://github.com/scenario-labs/skills#install);
 unattended, proceed from tool schemas and flag the gap.
 
-**REQUIRED BACKGROUND:** scenario-roblox-expert (channels, review loop, toolkit, current-Roblox
-traps).
+**Shared toolkit on demand:** Consult the lead skill only when orchestration or cross-domain context requires it.
 
 ## Stance (the expert delta)
 

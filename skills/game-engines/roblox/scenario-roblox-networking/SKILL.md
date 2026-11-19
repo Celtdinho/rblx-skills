@@ -1,10 +1,15 @@
 ---
 name: scenario-roblox-networking
-description: "Use when securing a Roblox experience against exploiters or designing its networking: RemoteEvent, RemoteFunction or UnreliableRemoteEvent design, validating remote arguments on the server, remote spam and rate limits, speed hacks, teleport or fly hacks, kill aura or hitbox abuse, hit validation under lag, network ownership and fling exploits, ProximityPrompt or ClickDetector abuse, honeypots, kick and ban policy, Server Authority (AuthorityMode) setup, bandwidth or payload size problems, or after an exploit (free items, infinite money, duplicated items)."
+description: "Use for Roblox remotes, server validation, rate limiting, ownership and anti-exploit."
 license: MIT
 ---
 
 # Roblox Networking and Security
+
+## Codex low-usage workflow
+<!-- CODEX_LOW_USAGE_V1 -->
+Read only relevant skills and references. Prefer one domain specialist; call the expert skill when MCP orchestration, a cross-domain issue or full audit actually requires it. QUICK: targeted static and behavior checks for contained fixes. STANDARD: focused tests and Studio playtest for features, with an inspected screenshot for visual changes. FULL: comprehensive audits, device checks and performance measurements for releases, major refactors or explicit requests. Reuse authorized Studio sessions, batch safe operations, avoid repeated hierarchy dumps and identical screenshots. Escalate if checks fail. Always verify server authorization, remote input, purchases, rewards and persistence on affected changes. Never report tests you did not run.
+
 
 Target: Roblox Studio (October 2026 build) on macOS, driven through the scenario-roblox-expert
 toolkit.
@@ -17,8 +22,7 @@ If a sibling skill named here is missing from your available skills, load it wit
 (Scenario MCP) or ask the user to install it (https://github.com/scenario-labs/skills#install);
 unattended, proceed from tool schemas and flag the gap.
 
-**REQUIRED BACKGROUND:** scenario-roblox-expert (channels, review loop, toolkit, current-Roblox
-traps).
+**Shared toolkit on demand:** Consult the lead skill only when orchestration or cross-domain context requires it.
 
 ## Stance (the expert delta)
 

@@ -1,10 +1,15 @@
 ---
 name: scenario-roblox-luau
-description: "Use when writing, reviewing or debugging Luau in a Roblox experience: task.spawn vs task.defer vs task.wait, replacing wait() or spawn(), Deferred events and SignalBehavior, handlers running in the wrong order or not at all, 'attempt to yield across metamethod/C-call boundary', --!strict and the new type solver, typed classes and metatables, Destroy and cleanup, 'server memory keeps growing' or memory leaks, Parallel Luau with Actors and SharedTable, 'not safe to write in parallel', --!native or 'make this script faster', buffers, coroutines."
+description: "Use for Roblox Luau typing, debugging, events, concurrency, cleanup and performance."
 license: MIT
 ---
 
 # Roblox Luau Engineering
+
+## Codex low-usage workflow
+<!-- CODEX_LOW_USAGE_V1 -->
+Read only relevant skills and references. Prefer one domain specialist; call the expert skill when MCP orchestration, a cross-domain issue or full audit actually requires it. QUICK: targeted static and behavior checks for contained fixes. STANDARD: focused tests and Studio playtest for features, with an inspected screenshot for visual changes. FULL: comprehensive audits, device checks and performance measurements for releases, major refactors or explicit requests. Reuse authorized Studio sessions, batch safe operations, avoid repeated hierarchy dumps and identical screenshots. Escalate if checks fail. Always verify server authorization, remote input, purchases, rewards and persistence on affected changes. Never report tests you did not run.
+
 
 Roblox Studio (October 2026 build) on macOS, driven through the scenario-roblox-expert toolkit.
 
@@ -17,8 +22,7 @@ If a sibling skill named here is missing from your available skills, load it wit
 (Scenario MCP) or ask the user to install it (https://github.com/scenario-labs/skills#install);
 unattended, proceed from tool schemas and flag the gap.
 
-**REQUIRED BACKGROUND:** scenario-roblox-expert (channels, review loop, toolkit, current-Roblox
-traps).
+**Shared toolkit on demand:** Consult the lead skill only when orchestration or cross-domain context requires it.
 
 ## Stance (the expert delta)
 

@@ -1,10 +1,15 @@
 ---
 name: scenario-roblox-assets
-description: "Use when bringing 3D assets into Roblox Studio or preparing avatar items: import from Blender, GLB, FBX or OBJ files, AI-generated or image-to-3D meshes (Scenario or other tools), wrong scale or size in studs, mesh faces the wrong way, too many triangles, mesh fails validation, holes or non-watertight meshes, textures too big or blurry, SurfaceAppearance and PBR maps, metalness or normal maps look wrong, rigid accessories and hats, UGC items, Accessory Fitting Tool, out of bounds, AvatarCreationService validation, EditableMesh or EditableImage previews, or generate_mesh."
+description: "Use for Roblox Blender mesh imports, asset validation, materials and avatars."
 license: MIT
 ---
 
 # Roblox Asset Pipeline and UGC
+
+## Codex low-usage workflow
+<!-- CODEX_LOW_USAGE_V1 -->
+Read only relevant skills and references. Prefer one domain specialist; call the expert skill when MCP orchestration, a cross-domain issue or full audit actually requires it. QUICK: targeted static and behavior checks for contained fixes. STANDARD: focused tests and Studio playtest for features, with an inspected screenshot for visual changes. FULL: comprehensive audits, device checks and performance measurements for releases, major refactors or explicit requests. Reuse authorized Studio sessions, batch safe operations, avoid repeated hierarchy dumps and identical screenshots. Escalate if checks fail. Always verify server authorization, remote input, purchases, rewards and persistence on affected changes. Never report tests you did not run.
+
 
 Target: Roblox Studio (October 2026 build) on macOS, driven through the scenario-roblox-expert
 toolkit.
@@ -18,8 +23,7 @@ If a sibling skill named here is missing from your available skills, load it wit
 (Scenario MCP) or ask the user to install it (https://github.com/scenario-labs/skills#install);
 unattended, proceed from tool schemas and flag the gap.
 
-**REQUIRED BACKGROUND:** scenario-roblox-expert (channels, review loop, toolkit, current-Roblox
-traps).
+**Shared toolkit on demand:** Consult the lead skill only when orchestration or cross-domain context requires it.
 
 ## Stance (the expert delta)
 
