@@ -1,10 +1,15 @@
 ---
 name: scenario-roblox-data
-description: "Use when a Roblox game saves or loads player data, or when players report data not saving, lost progress, rollbacks, duplicated items or a purchase granted twice. Triggers: DataStoreService, UpdateAsync, SetAsync, BindToClose, ProfileStore, ProfileService, DataStore2, session locking, data schema or migration, Developer Product ProcessReceipt, player trading, OrderedDataStore leaderboards, MemoryStore, MessagingService, TeleportService and reserved servers, DataStore budgets and throttling (errors 301 to 306), 'You must publish this place to the web to access DataStore', and testing data code in an unpublished place."
+description: "Use for Roblox DataStore persistence, migrations, receipts, session locking and data safety."
 license: MIT
 ---
 
 # Roblox Data and Backend
+
+## Codex low-usage workflow
+<!-- CODEX_LOW_USAGE_V1 -->
+Read only relevant skills and references. Prefer one domain specialist; call the expert skill when MCP orchestration, a cross-domain issue or full audit actually requires it. QUICK: targeted static and behavior checks for contained fixes. STANDARD: focused tests and Studio playtest for features, with an inspected screenshot for visual changes. FULL: comprehensive audits, device checks and performance measurements for releases, major refactors or explicit requests. Reuse authorized Studio sessions, batch safe operations, avoid repeated hierarchy dumps and identical screenshots. Escalate if checks fail. Always verify server authorization, remote input, purchases, rewards and persistence on affected changes. Never report tests you did not run.
+
 
 Roblox Studio (October 2026 build) on macOS, driven through the scenario-roblox-expert toolkit.
 
@@ -16,8 +21,7 @@ If a sibling skill named here is missing from your available skills, load it wit
 (Scenario MCP) or ask the user to install it (https://github.com/scenario-labs/skills#install);
 unattended, proceed from tool schemas and flag the gap.
 
-**REQUIRED BACKGROUND:** scenario-roblox-expert (channels, review loop, toolkit, current-Roblox
-traps).
+**Shared toolkit on demand:** Consult the lead skill only when orchestration or cross-domain context requires it.
 
 ## Stance (the expert delta)
 
