@@ -1,10 +1,15 @@
 ---
 name: scenario-roblox-vfx-audio
-description: "Use when making or fixing Roblox visual effects or game audio: ParticleEmitter, Beam, Trail, flipbook sprite sheets, slash, hit, impact, explosion, fireball, aura or projectile VFX; effects only one player sees, effects that lag or pile up, particles invisible, popping or too bright; the Audio API (AudioPlayer, Wire, AudioEmitter, AudioListener, AudioDeviceOutput, effects), \"no sound\", \"3D sound not working\", music, ducking, footsteps, SoundGroup volumes; or importing Scenario-generated sound effects, music, voice or VFX sheets into a Roblox game."
+description: "Use for Roblox particles, beams, trails, SFX, audio routing and VFX performance."
 license: MIT
 ---
 
 # Roblox VFX and audio
+
+## Codex low-usage workflow
+<!-- CODEX_LOW_USAGE_V1 -->
+Read only relevant skills and references. Prefer one domain specialist; call the expert skill when MCP orchestration, a cross-domain issue or full audit actually requires it. QUICK: targeted static and behavior checks for contained fixes. STANDARD: focused tests and Studio playtest for features, with an inspected screenshot for visual changes. FULL: comprehensive audits, device checks and performance measurements for releases, major refactors or explicit requests. Reuse authorized Studio sessions, batch safe operations, avoid repeated hierarchy dumps and identical screenshots. Escalate if checks fail. Always verify server authorization, remote input, purchases, rewards and persistence on affected changes. Never report tests you did not run.
+
 
 Target: Roblox Studio (October 2026 build) on macOS, driven through the scenario-roblox-expert
 toolkit.
@@ -17,8 +22,7 @@ mix. If a sibling skill named here is missing from your available skills, load i
 (Scenario MCP) or ask the user to install it (https://github.com/scenario-labs/skills#install);
 unattended, proceed from tool schemas and flag the gap.
 
-**REQUIRED BACKGROUND:** scenario-roblox-expert (channels, review loop, toolkit, current-Roblox
-traps).
+**Shared toolkit on demand:** Consult the lead skill only when orchestration or cross-domain context requires it.
 
 **Status (2026-10-19):** 17 of 17 live tests pass in Studio 0.743 (two on a rerun after MCP
 timeouts), with playtests, the copy-ready scripts included; 5 of 5 offline checks pass (`rbx_check`
