@@ -1,10 +1,15 @@
 ---
 name: scenario-roblox-architecture
-description: "Use when structuring Roblox game code: where scripts go (ServerScriptService, ReplicatedStorage, StarterPlayerScripts), Script vs LocalScript and RunContext, a module loader or framework (Knit or none), services and controllers, how systems talk (signals, BindableEvents, attributes), CollectionService tags, cleanup with Trove or Janitor, Rojo project layout, or a round-based game core. Also when code is spaghetti, a script runs twice, require errors with 'required recursively', a module is nil on the client, a tool stops working after respawn, or memory climbs from leaked connections."
+description: "Use for Roblox project architecture, scripts, modules, ownership and cleanup."
 license: MIT
 ---
 
 # Roblox architecture (gameplay programmer and architect)
+
+## Codex low-usage workflow
+<!-- CODEX_LOW_USAGE_V1 -->
+Read only relevant skills and references. Prefer one domain specialist; call the expert skill when MCP orchestration, a cross-domain issue or full audit actually requires it. QUICK: targeted static and behavior checks for contained fixes. STANDARD: focused tests and Studio playtest for features, with an inspected screenshot for visual changes. FULL: comprehensive audits, device checks and performance measurements for releases, major refactors or explicit requests. Reuse authorized Studio sessions, batch safe operations, avoid repeated hierarchy dumps and identical screenshots. Escalate if checks fail. Always verify server authorization, remote input, purchases, rewards and persistence on affected changes. Never report tests you did not run.
+
 
 Target: Roblox Studio (October 2026 build) on macOS, driven through the scenario-roblox-expert
 toolkit.
@@ -18,8 +23,7 @@ skill named here is missing from your available skills, load it with `skill_get`
 ask the user to install it (https://github.com/scenario-labs/skills#install); unattended, proceed
 from tool schemas and flag the gap.
 
-**REQUIRED BACKGROUND:** scenario-roblox-expert (channels, review loop, toolkit, current-Roblox
-traps).
+**Shared toolkit on demand:** Consult the lead skill only when orchestration or cross-domain context requires it.
 
 **Status (2026-10-19):** 14 live tests pass in Studio 0.743; 8 offline checks pass (18 Lune unit
 tests, luau-lsp on both type solvers over code, fixtures and snippets, StyLua, selene).
