@@ -1,10 +1,15 @@
 ---
 name: scenario-roblox-expert
-description: "Use when an agent builds, fixes or tests anything in Roblox Studio: \"make a Roblox game\", \"Roblox Studio\", a Luau script, \"my Roblox game lags\", agent control of Studio, the Studio MCP server (execute_luau, start_stop_play, screen_capture), Rojo or Script Sync projects, offline Luau checks, playtests driven by code; when the MCP server lists no Studio, a playtest hangs, or 2019 to 2023 Roblox code breaks; or when a Roblox brief (UI, data, networking, combat, monetization, assets, performance) must go to the right scenario-roblox-* specialist."
+description: "Use for Roblox Studio MCP orchestration, multi-domain workflows, full-game audits or Studio tool failures; prefer specialists for focused tasks."
 license: MIT
 ---
 
 # Roblox expert (technical director and agent protocol)
+
+## Codex low-usage workflow
+<!-- CODEX_LOW_USAGE_V1 -->
+Read only relevant skills and references. Prefer one domain specialist; call the expert skill when MCP orchestration, a cross-domain issue or full audit actually requires it. QUICK: targeted static and behavior checks for contained fixes. STANDARD: focused tests and Studio playtest for features, with an inspected screenshot for visual changes. FULL: comprehensive audits, device checks and performance measurements for releases, major refactors or explicit requests. Reuse authorized Studio sessions, batch safe operations, avoid repeated hierarchy dumps and identical screenshots. Escalate if checks fail. Always verify server authorization, remote input, purchases, rewards and persistence on affected changes. Never report tests you did not run.
+
 
 Target: Roblox Studio (October 2026 build) on macOS, driven through the scenario-roblox-expert
 toolkit.
@@ -36,10 +41,7 @@ pending: it needs a machine with no interactive Studio.
    XLCZfGEm9tU [00:02:12]). Triage: works, real device, frame rate, Stats, then MicroProfiler
    (McNeill, rwLEnBtXr30 [00:29:19]). Studio memory "is incorrect" (McNeill, cWDNVvOh4o0
    [00:28:25]): it read 3,800 MB in a small playtest here.
-4. **Look AND check.** Every visual change gets captures from fixed cameras,
-   [`image_checks`](scripts/rbx_review.py), a before and after `compare`, and a contact sheet you
-   open. Feel cannot be automated (RDC 2026, vumAuOqSmNA [00:29:36]); AI "doesn't automatically have
-   taste" (SmartyRBX, da-wHJpNhBo [00:07:35]).
+4. **Visual verification by scope.** Inspect changed visuals once for focused fixes; use multiple fixed-camera comparisons and image checks for large revisions or release.
 5. **Small steps, red before green.** One feature per prompt (SmartyRBX, 0ENeVVC9QT0 [00:10:26]).
    Follow a working answer with a security review, and test death and respawn (SimTek, -0H6JRtrA2Y
    [00:03:53, 00:06:42]). Write the `Spec` test first and watch it fail.
@@ -85,7 +87,7 @@ Ask once, then run:
 - whether Server Authority or streaming is wanted (`StreamingEnabled` is on in new places);
 - which place is the agent's own, and the deliverable.
 
-Then `rbx_env.doctor()` and an `Audit.all(game)` of the starting place. Write the budget, sync tool,
+Use `rbx_env.doctor()` when tools are unavailable or unknown; reserve `Audit.all(game)` for broad changes, baseline audits and release. Write the budget, sync tool,
 data model plan and owners into the plan.
 
 ## The expert loop
