@@ -1,10 +1,15 @@
 ---
 name: scenario-roblox-gameplay
-description: "Use when building Roblox gameplay systems: NPC or enemy AI that patrols, chases and attacks, state machines or behavior trees, 'NPC pathfinding stuck', 100 zombies lag the server, hitboxes, melee combos, M1 combat, 'hits register twice', raycasts, Spherecast, Shapecast, guns and projectiles, 'bullets go through walls', knockback and stun, LinearVelocity, VectorForce or AlignPosition movers, replacing BodyVelocity, cars and vehicles with suspension, 'car flips', VehicleSeat, network ownership of NPCs and vehicles, round loops, BindToSimulation logic."
+description: "Use for Roblox gameplay: NPCs, pathfinding, combat, hitboxes, projectiles, vehicles and game loops."
 license: MIT
 ---
 
 # Roblox gameplay systems (gameplay systems programmer)
+
+## Codex low-usage workflow
+<!-- CODEX_LOW_USAGE_V1 -->
+Read only relevant skills and references. Prefer one domain specialist; call the expert skill when MCP orchestration, a cross-domain issue or full audit actually requires it. QUICK: targeted static and behavior checks for contained fixes. STANDARD: focused tests and Studio playtest for features, with an inspected screenshot for visual changes. FULL: comprehensive audits, device checks and performance measurements for releases, major refactors or explicit requests. Reuse authorized Studio sessions, batch safe operations, avoid repeated hierarchy dumps and identical screenshots. Escalate if checks fail. Always verify server authorization, remote input, purchases, rewards and persistence on affected changes. Never report tests you did not run.
+
 
 Target line: Roblox Studio (October 2026 build) on macOS, driven through the scenario-roblox-expert
 toolkit.
@@ -16,8 +21,7 @@ sibling skill named here is missing from your available skills, load it with `sk
 MCP) or ask the user to install it (https://github.com/scenario-labs/skills#install); unattended,
 proceed from tool schemas and flag the gap.
 
-**REQUIRED BACKGROUND:** scenario-roblox-expert (channels, review loop, toolkit, current-Roblox
-traps).
+**Shared toolkit on demand:** Consult the lead skill only when orchestration or cross-domain context requires it.
 
 **Status (2026-10-19):** 23 live tests pass in Studio 0.743 (Edit probes, NPC bench, hunt, debug
 drawings, combo, remote flood, car and its exit with the throttle held, movers, every doc snippet in
