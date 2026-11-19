@@ -1,10 +1,15 @@
 ---
 name: scenario-roblox-monetization
-description: "Use when a Roblox game sells something or plans live ops: Developer Products, game passes, experience subscriptions, Roblox Plus perks, ProcessReceipt or BindReceiptHandler, \"bought it but didn't get it\", a purchase granted twice, shop UI prices, eggs, crates or loot boxes with odds (paid random items, PolicyService), rewarded video ads, AnalyticsService funnels, economy or custom events, ConfigService live config, A/B experiments, price optimization or regional pricing, game thumbnails and icons, play-through rate, Creator Rewards, Ads Manager campaigns, or a launch and update plan."
+description: "Use for Roblox purchases, passes, receipts, shop economy and live ops."
 license: MIT
 ---
 
 # Roblox Monetization and Live Ops
+
+## Codex low-usage workflow
+<!-- CODEX_LOW_USAGE_V1 -->
+Read only relevant skills and references. Prefer one domain specialist; call the expert skill when MCP orchestration, a cross-domain issue or full audit actually requires it. QUICK: targeted static and behavior checks for contained fixes. STANDARD: focused tests and Studio playtest for features, with an inspected screenshot for visual changes. FULL: comprehensive audits, device checks and performance measurements for releases, major refactors or explicit requests. Reuse authorized Studio sessions, batch safe operations, avoid repeated hierarchy dumps and identical screenshots. Escalate if checks fail. Always verify server authorization, remote input, purchases, rewards and persistence on affected changes. Never report tests you did not run.
+
 
 Target: Roblox Studio (October 2026 build) on macOS, driven through the scenario-roblox-expert
 toolkit.
@@ -19,8 +24,7 @@ If a sibling skill named here is missing from your available skills, load it wit
 (Scenario MCP) or ask the user to install it (https://github.com/scenario-labs/skills#install);
 unattended, proceed from tool schemas and flag the gap.
 
-**REQUIRED BACKGROUND:** scenario-roblox-expert (channels, review loop, toolkit, current-Roblox
-traps).
+**Shared toolkit on demand:** Consult the lead skill only when orchestration or cross-domain context requires it.
 
 ## Stance (the expert delta)
 
